@@ -8,7 +8,12 @@ export default {
   <div class="my-container">
     <div class="h-full flex-center justify-center">
       <div class="card">
-        <img class="w-full rounded-xl" src="/imgs/image-equilibrium.jpg" alt="">  
+        <div class="h-[308px] static group hover:cursor-pointer">
+          <img class="absolute-items" src="/imgs/image-equilibrium.jpg" alt="">  
+          <div class="absolute-items invisible group-hover:visible bg-[#00fff7] bg-opacity-45">
+            <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" src="/public/imgs/icon-view.svg" alt="">
+          </div>
+        </div>
 
         <h1 class="title">Equilibrium #3429</h1>
         <p class=" text-slate-400 pb-4">Our Equilibrium collection promotes balance and clam.</p>
@@ -30,7 +35,7 @@ export default {
 
         <div class="flex-center">
           <img class="h-9 border rounded-full me-5" src="/imgs/image-avatar.png" alt="">
-          <div class="text-slate-400">Creation of <span class="text-white">Jules Wyvern</span></div>
+          <div class="text-slate-400">Creation of <span class="text-white name-auth">Jules Wyvern</span></div>
         </div>
       </div>
     </div>
@@ -50,9 +55,18 @@ export default {
 
   .card{
     @apply w-[356px] p-6 bg-[#15273f] rounded-xl;
+
+    .absolute-items{
+      @apply w-[308px] h-[308px] absolute rounded-xl;
+    }
   
     .title{
       @apply text-white text-2xl font-medium py-4;
+    }
+
+    .title, 
+    .name-auth{
+      @apply hover:cursor-pointer hover:text-[#00fff7]
     }
   
     .img-style {
